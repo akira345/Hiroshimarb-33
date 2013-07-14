@@ -1,0 +1,91 @@
+
+=(('tag:small'))Chefについて数週間勉強してみた
+
+: author
+	(('tag:small'))@akira345
+
+: institution
+	(('tag:small'))Hiroshima.rb
+
+: theme
+    rabbit
+
+: allotted-time
+   15m
+
+= 自己紹介
+*(('tag:small'))本業：クラウド屋さん（暫定）
+*(('tag:small'))所属：
+	*(('tag:x-small'))Hiroshima.rb
+	*(('tag:x-small'))広島サーバユーザ友の会（仮）
+	*(('tag:x-small'))広島電子工作娯楽部（仮称）
+	*(('tag:x-small'))WindowsPhoneハンズオンin広島
+	*(('tag:x-small'))オープンセミナー2014@広島　実行メンバー
+	*(('tag:x-small'))OSC広島実行メンバー
+	*(('tag:x-small'))WTM時々インフラ担当
+
+= 転職しました！
+*(('tag:small'))某社にご縁があって転職しました
+*(('tag:small'))どちらかというと異業種。毎日サバイバル。
+*(('tag:small'))((*上司のイライラの種*))
+*(('tag:small'))((*朝つらいっす・・・*))
+
+= Chefを使うことを強いられているんだ！！
+*(('tag:small'))職場ではChefを使っていました。
+*(('tag:small'))((*コードが欠片もわかりませんでしたOrz*))
+\n
+*(('tag:centor'))((*ヤバイ。死んでしまう*))
+
+= Chefってなに？
+*(('tag:small'))シェフと呼びます。(('del:(SEO的にかなり辛い）'))
+*(('tag:small'))opscode社が提供しているサーバ自動デプロイツール。
+*(('tag:small'))サーバの設定をRubyのDSLで記述する(サーバ構成が書かれた設定スクリプトイメージ)
+*(('tag:small'))サーバを大量生産するときに役立つ
+*(('tag:small'))((*サーバにどのような設定をしたのか把握できる*))
+
+= chefの構成
+
+  # image
+  # src = overview_chef_draft.png
+  # width = 650
+  # height = 450
+#  # normalized_width = 100
+#  # normalized_height = 100
+#  # relative_width = 100
+#  # relative_height = 100
+
+
+= Chef Server
+*(('tag:small'))Nodeの管理
+*(('tag:small'))Cookbook、Recipeの管理
+ *(('tag:small'))WEB上から操作できます。
+
+=Workstation
+*(('tag:small'))Chef Serverを操作し、CookbookやRecipeの作成や構成管理
+
+=Node
+*(('tag:small'))Chef Serverが管理するマシンたち。
+*(('tag:small'))Chef  Serverで管理されているCookbookやRecipe情報を取得し、タスクを実行します。
+
+=用語について
+*(('tag:small'))用語が(('del:独創的'))ある意味一般的で検索が非常に困難
+*(('tag:small'))Cookbook
+	*(('tag:small'))Recipe、Template、Attribute などをひとまとめにしたディレクトリ。
+	*(('tag:small'))ソフトの種類毎に作るのがお約束ぽい。
+	*(('tag:small'))環境に依存するものはroleやnodeに設定する。(PWとか)
+
+=用語について
+*(('tag:small'))Recipe
+	*(('tag:small'))設定を記述したrubyスクリプト。１つのCoolbookに複数存在する。
+*(('tag:small'))Template
+	*(('tag:small'))設定ファイルを生成するためのテンプレート
+
+=用語について
+*(('tag:small'))Attribute
+	*(('tag:small'))環境依存の処理を吸収するための変数。
+*(('tag:small'))role
+	*(('tag:small'))サーバ枚にどのRecipeを使うのかを書く。各サーバはroleに記載されたrecipeに従う。
+
+=　
+*(('tag:small'))やってみる。
+
